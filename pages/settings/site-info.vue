@@ -121,7 +121,7 @@
                   <div><label for="">Логотип</label></div>
                   <div class="clearfix variant-img">
                     <a-upload
-                      action="https://api.home24.uz/api/admin/files/upload"
+                      action="https://e-shop.ndc.uz/api/admin/files/upload"
                       :headers="headers"
                       list-type="picture-card"
                       :file-list="fileList"
@@ -147,7 +147,7 @@
                   <div><label for="">Favicon</label></div>
                   <div class="clearfix variant-img">
                     <a-upload
-                      action="https://api.home24.uz/api/admin/files/upload"
+                      action="https://e-shop.ndc.uz/api/admin/files/upload"
                       :headers="headers"
                       list-type="picture-card"
                       :file-list="fileList1"
@@ -173,7 +173,7 @@
                   <div><label for="">QR code</label></div>
                   <div class="clearfix variant-img">
                     <a-upload
-                      action="https://api.home24.uz/api/admin/files/upload"
+                      action="https://e-shop.ndc.uz/api/admin/files/upload"
                       :headers="headers"
                       list-type="picture-card"
                       :file-list="fileList2"

@@ -152,7 +152,7 @@
               :class="{ 'reqired-error': bannerRequired == imageSize }"
             >
               <a-upload
-                action="https://api.home24.uz/api/admin/files/upload"
+                action="https://e-shop.ndc.uz/api/admin/files/upload"
                 :headers="headers"
                 list-type="picture-card"
                 :file-list="fileList[imageSize][item.index]"
