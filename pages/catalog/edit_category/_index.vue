@@ -365,7 +365,7 @@
                 <div class="clearfix">
                   <a-upload
                     list-type="picture-card"
-                    action="https://e-shop.ndc.uz/api/admin/files/upload"
+                    action="https://api.home24.uz/api/admin/files/upload"
                     :headers="headers"
                     :file-list="fileList.img"
                     @preview="handlePreview"
@@ -396,7 +396,7 @@
                 <div class="clearfix">
                   <a-upload
                     list-type="picture-card"
-                    action="https://e-shop.ndc.uz/api/admin/files/upload"
+                    action="https://api.home24.uz/api/admin/files/upload"
                     :headers="headers"
                     :file-list="fileList.icon"
                     @preview="handlePreview"
