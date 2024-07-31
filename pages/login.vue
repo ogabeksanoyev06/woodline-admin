@@ -2,7 +2,7 @@
   <div class="login_container">
     <div class="login_block">
       <div class="login_header mb-10">
-        <h1 class="mb-3">Sign In to Home24 Admin</h1>
+        <h1 class="mb-3">Sign In to Woodline Admin</h1>
       </div>
       <div class="login_form">
         <div class="login_input mb-10">
@@ -17,7 +17,9 @@
           <input type="password" class="input" />
         </div>
       </div>
-      <div class="login_btn d-flex justify-content-center" @click="login">Continue</div>
+      <div class="login_btn d-flex justify-content-center" @click="login">
+        Continue
+      </div>
     </div>
   </div>
 </template>

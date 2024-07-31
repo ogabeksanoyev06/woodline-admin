@@ -51,13 +51,19 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="9" class="home_menu" v-if="checkShow('dashboard')">
+            <el-submenu
+              index="9"
+              class="home_menu"
+              v-if="checkShow('dashboard')"
+            >
               <div slot="title">
                 <span class="menu-icon" v-html="icons.dashboardIcon"></span>
                 <p>Dashboard</p>
@@ -80,13 +86,19 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="8" class="home_menu" v-if="checkShow('showcases')">
+            <el-submenu
+              index="8"
+              class="home_menu"
+              v-if="checkShow('showcases')"
+            >
               <div slot="title">
                 <span class="menu-icon" v-html="icons.orderIcon"> </span>
                 <p>Витрины</p>
@@ -105,7 +117,9 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
@@ -136,7 +150,9 @@
                       is_active: items.to == $route.path,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
@@ -145,7 +161,9 @@
             <el-submenu
               index="3"
               class="home_menu"
-              v-if="toolbarMenu.marketing?.filter((elem) => elem.show).length > 0"
+              v-if="
+                toolbarMenu.marketing?.filter((elem) => elem.show).length > 0
+              "
             >
               <div slot="title">
                 <span v-html="icons.marketingIcon" class="menu-icon"> </span>
@@ -165,7 +183,9 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
@@ -211,7 +231,9 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
@@ -220,7 +242,9 @@
             <el-submenu
               index="6"
               class="home_menu"
-              v-if="toolbarMenu.settings?.filter((elem) => elem.show).length > 0"
+              v-if="
+                toolbarMenu.settings?.filter((elem) => elem.show).length > 0
+              "
             >
               <div slot="title">
                 <span class="menu-icon" v-html="icons.settingsIcon"> </span>
@@ -246,7 +270,9 @@
                       :index="itemsIn.index"
                       :class="{ is_active: itemsIn.to == $route.path }"
                     >
-                      <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                      <span class="menu-bullet"
+                        ><span class="bullet-dot"></span
+                      ></span>
                       <p>{{ itemsIn.name }}</p></el-menu-item
                     >
                   </nuxt-link>
@@ -268,7 +294,9 @@
                       disabled: items.disabled,
                     }"
                   >
-                    <span class="menu-bullet"><span class="bullet-dot"></span></span>
+                    <span class="menu-bullet"
+                      ><span class="bullet-dot"></span
+                    ></span>
                     <p>{{ items.name }}</p></el-menu-item
                   >
                 </nuxt-link>
@@ -392,7 +420,8 @@ export default {
         dashboardIcon: require("../assets/svg/custom/toolbar/dashboard.svg?raw"),
       },
       toolbarMenu: {},
-      squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
+      squareUrl:
+        "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
     };
   },
 
@@ -761,7 +790,9 @@ export default {
     },
     checkShow(val) {
       if (this.$store.state.permissions.length > 0) {
-        const target = this.$store.state.permissions.find((item) => item.url == val);
+        const target = this.$store.state.permissions.find(
+          (item) => item.url == val
+        );
         return Boolean(target?.methods.includes("GET"));
       } else {
         return true;

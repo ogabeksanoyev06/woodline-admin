@@ -1,6 +1,10 @@
 <template lang="html">
   <div>
-    <TitleBlock title="Пользователи" :breadbrumb="['настройки']" lastLink="Пользователи">
+    <TitleBlock
+      title="Пользователи"
+      :breadbrumb="['настройки']"
+      lastLink="Пользователи"
+    >
       <div
         v-if="checkAccess('users', 'POST')"
         class="add-btn add-header-btn add-header-btn-padding btn-primary"
@@ -60,7 +64,12 @@
         </div>
       </div>
     </div>
-    <a-modal v-model="visible" title="Добавить" :closable="false" @ok="handleOk">
+    <a-modal
+      v-model="visible"
+      title="Добавить"
+      :closable="false"
+      @ok="handleOk"
+    >
       <el-form
         label-position="top"
         :model="ruleForm"
